@@ -1,10 +1,36 @@
-# Getting Started with Create React App
+# WIP Photography Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+From scratch rewrite of my photography portfolio because [my current fork](https://github.com/Jellayy/photos.alhuff.com) just ain't cutting it
 
-## Available Scripts
+## Workflow
 
-In the project directory, you can run:
+This page is built on react.js and deploys an optimized build to github pages (ez free hosting). Because of that, this repo has seperate workflows for deploying to two main branches (eventually I should automate this in github itself if possible). 
+
+### Deploying to the `gh-pages` branch
+
+The `gh-pages` branch is what contains the deployment optimized build and actually gets published to github pages. To update this branch run:
+
+``` bash
+npm run deploy -- -m "Commit Message"
+```
+
+### Updating the `master` branch with page source
+
+The `master` branch is what contains the working source that the `gh-pages` branch is built from. This is what releases will be based on and will not be deployed to github pages. Update this like you would usually update a git branch.
+
+``` bash
+git add .
+git commit -m "Commit Message"
+git push origin master
+```
+
+Note: Because I've worked in devops, my master branch is protected out of habit and will only be updated with merge requests. If you shamelessly steal my workflow feel free to manage it however you want.
+
+### More info on this workflow
+
+If you want to use this workflow for your own react website, you can read more about it [here](https://github.com/gitname/react-gh-pages).
+
+## Misc React Scripts for Development Cheat Sheet
 
 ### `npm start`
 
